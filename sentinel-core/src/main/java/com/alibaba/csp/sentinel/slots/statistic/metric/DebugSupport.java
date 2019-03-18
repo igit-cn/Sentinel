@@ -1,5 +1,5 @@
 /*
- * Copyright 1999-2018 Alibaba Group Holding Ltd.
+ * Copyright 1999-2019 Alibaba Group Holding Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,15 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.alibaba.csp.sentinel.adapter.dubbo.provider;
-
-import com.alibaba.csp.sentinel.adapter.dubbo.DemoService;
+package com.alibaba.csp.sentinel.slots.statistic.metric;
 
 /**
- * @author leyou
+ * @author Eric Zhao
+ * @since 1.5.0
  */
-public class DemoServiceImpl implements DemoService {
-    public String sayHello(String name, int n) {
-        return "Hello " + name + ", " + n;
-    }
+public interface DebugSupport {
+
+    /**
+     * For debug;
+     */
+    void debug();
 }
